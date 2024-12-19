@@ -1,0 +1,107 @@
+.korzinka-main {
+	background-image: url('../assets/main_bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 90vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $main-color;
+	font-family: 'Raleway';
+	&__title {
+		font-size: 4.5rem;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		font-weight: 900;
+		color: $second-color;
+	}
+	&__span {
+		color: $second-color;
+		font-weight: 400;
+		margin-bottom: 30px;
+		font-size: 2.3rem;
+	}
+	&__info {
+		font-family: 'Raleway';
+		font-weight: 400;
+		font-size: 1.2rem;
+		margin-bottom: 50px;
+	}
+	&__btn {
+		background-color: $second-color;
+		color: $main-color;
+		font-weight: 100;
+		border: none;
+		font-size: 3.8rem;
+		padding: 10px 70px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		&:hover {
+			background-color: rgb(7, 139, 7);
+		}
+	}
+	// Responsive Styles
+	@media (max-width: 1024px) {
+		// Tablet
+		&__title {
+			font-size: 3.5rem;
+			margin-bottom: 20px;
+		}
+		&__span {
+			font-size: 2rem;
+		}
+		&__info {
+			font-size: 1rem;
+			margin-bottom: 40px;
+		}
+		&__btn {
+			font-size: 3rem;
+			padding: 10px 50px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		// Mobile
+		flex-direction: column; // Mobil qurilmalarda kontent vertikal joylashadi
+		padding: 20px;
+
+		&__title {
+			font-size: 2.5rem;
+			margin-bottom: 15px;
+		}
+		&__span {
+			font-size: 1.8rem;
+			margin-bottom: 20px;
+		}
+		&__info {
+			font-size: 0.9rem;
+			margin-bottom: 30px;
+		}
+		&__btn {
+			font-size: 2.5rem;
+			padding: 10px 40px;
+		}
+	}
+
+	@media (max-width: 425px) {
+		// Small Mobile
+		&__title {
+			font-size: 2rem;
+			margin-bottom: 10px;
+		}
+		&__span {
+			font-size: 1.5rem;
+			margin-bottom: 15px;
+		}
+		&__info {
+			font-size: 0.8rem;
+			margin-bottom: 20px;
+		}
+		&__btn {
+			font-size: 2rem;
+			padding: 8px 30px;
+		}
+	}
+}

@@ -1,0 +1,148 @@
+.footer {
+	background-color: #000;
+	color: $main-color;
+	text-align: center;
+	padding: 20px 0;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 50px;
+
+		@media (max-width: 1024px) {
+			padding: 0 30px;
+		}
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 20px;
+			padding: 0 20px;
+		}
+	}
+
+	&__logo button {
+		background-color: $second-color;
+		color: $main-color;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1.3rem;
+		font-weight: 400;
+		border: none;
+		padding: 5px 20px;
+		border-radius: 3px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: #3e7f0a;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 1.2rem;
+			padding: 10px 15px;
+		}
+
+		@media (max-width: 500px) {
+			font-size: 1rem;
+			padding: 8px 10px;
+		}
+	}
+
+	&__menu ul {
+		display: flex;
+		gap: 20px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: 400;
+			cursor: pointer;
+
+			&:hover {
+				color: #4e9f0d;
+			}
+
+			@media (max-width: 768px) {
+				font-size: 0.9rem;
+			}
+
+			@media (max-width: 500px) {
+				font-size: 0.8rem;
+			}
+		}
+
+		@media (max-width: 768px) {
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+	}
+
+	&__contact p {
+		color: #4e9f0d;
+		font-family: sans-serif;
+		font-size: 1.2rem;
+		font-weight: 600;
+
+		@media (max-width: 768px) {
+			font-size: 1rem;
+		}
+
+		@media (max-width: 500px) {
+			font-size: 0.9rem;
+		}
+	}
+
+	&__info {
+		margin-top: 20px;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		color: $last-color;
+
+		@media (max-width: 768px) {
+			font-size: 0.8rem;
+		}
+
+		@media (max-width: 500px) {
+			font-size: 0.7rem;
+		}
+	}
+
+	.back-to-top {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background-color: #4e9f0d;
+		color: #fff;
+		border: none;
+		padding: 5px 15px;
+		cursor: pointer;
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-radius: 50px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		display: none; /* Default ko‘rinmaydi */
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: #3e7f0a;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 1.2rem;
+			padding: 8px 10px;
+			bottom: 15px;
+			right: 15px;
+		}
+
+		@media (max-width: 500px) {
+			font-size: 1rem;
+			padding: 6px 8px;
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+}

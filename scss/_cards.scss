@@ -1,0 +1,210 @@
+.card-menu {
+	padding: 20px;
+
+	&__title {
+		display: flex;
+		justify-content: start;
+		gap: 50px;
+		margin-bottom: 70px;
+		margin-top: 30px;
+		list-style: none;
+		padding: 0;
+
+		.card-menu__item {
+			font-family: 'Raleway', sans-serif;
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: $last-color;
+			cursor: pointer;
+			margin-bottom: 20px;
+
+			&:hover {
+				color: $second-color;
+				transition: all 0.2s ease;
+			}
+		}
+	}
+
+	.cards-container {
+		display: grid;
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(300px, 1fr)
+		); // Auto-fit grid
+		gap: 20px;
+	}
+
+	.card {
+		overflow: hidden;
+
+		.image-container {
+			position: relative;
+			width: 100%;
+			max-height: 600px;
+
+			img {
+				width: 100%;
+				height: 300px; // Default img height
+				object-fit: cover;
+				display: block;
+			}
+
+			// Hover Overlay
+			.hover-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(78, 159, 13, 0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				opacity: 0;
+				transition: opacity 0.3s ease-in-out;
+
+				span {
+					font-family: 'Raleway', sans-serif;
+					font-size: 1.5rem;
+					font-weight: 700;
+					color: #fff;
+					text-transform: uppercase;
+				}
+			}
+
+			// Price Button
+			.price {
+				position: absolute;
+				bottom: 0;
+				left: 70px;
+				transform: translateX(-50%);
+				background-color: $second-color;
+				color: $main-color;
+				font-family: 'Raleway', sans-serif;
+				font-size: 1.4rem;
+				text-align: center;
+				font-weight: 400;
+				padding: 15px 60px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+
+			&:hover .hover-overlay {
+				opacity: 1;
+			}
+
+			&:hover .price {
+				opacity: 0;
+			}
+		}
+
+		.content {
+			margin-top: 30px;
+			text-align: left;
+
+			h3 {
+				font-family: 'Raleway', sans-serif;
+				font-size: 1.4rem;
+				font-weight: 700;
+				color: $second-color;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-family: 'Raleway', sans-serif;
+				font-size: 1rem;
+				font-weight: 400;
+				color: $main-color;
+				line-height: 1.4;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.cards-container {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
+
+	.card-menu__title {
+		gap: 40px;
+	}
+
+	.card-menu__item {
+		font-size: 1.1rem;
+	}
+}
+
+/* 1024px uchun */
+@media (max-width: 1024px) {
+	.cards-container {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+
+	.card-menu__title {
+		gap: 30px;
+	}
+
+	.card-menu__item {
+		font-size: 1rem;
+	}
+
+	.image-container img {
+		height: 280px; // Rasmlarni biroz kichikroq qilamiz
+	}
+}
+
+/* 760px uchun */
+@media (max-width: 760px) {
+	.cards-container {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+
+	.card-menu__title {
+		flex-direction: column;
+		gap: 20px;
+		align-items: flex-start;
+	}
+
+	.card-menu__item {
+		font-size: 0.95rem;
+	}
+
+	.image-container img {
+		height: 250px;
+	}
+}
+
+/* 500px uchun */
+@media (max-width: 500px) {
+	.cards-container {
+		grid-template-columns: 1fr;
+	}
+
+	.card-menu__item {
+		font-size: 0.85rem;
+	}
+
+	.image-container img {
+		height: 200px;
+	}
+
+	.price {
+		font-size: 1rem;
+		padding: 8px 20px;
+	}
+
+	.hover-overlay span {
+		font-size: 1rem;
+	}
+
+	.content h3 {
+		font-size: 1rem;
+	}
+
+	.content p {
+		font-size: 0.85rem;
+	}
+}

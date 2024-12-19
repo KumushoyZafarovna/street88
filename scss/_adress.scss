@@ -1,0 +1,41 @@
+.location-info {
+	&__title {
+		font-weight: 700;
+		color: $second-color;
+		font-size: 2.5rem;
+		margin-bottom: 35px;
+		text-transform: uppercase;
+		padding-top: 30px;
+		margin-top: 25px;
+		text-align: center;
+		line-height: 1.2;
+		margin-left: auto;
+		margin-right: auto;
+		@media (max-width: 1024px) {
+			font-size: 2rem;
+		}
+		@media (max-width: 775px) {
+			font-size: 1.8rem;
+		}
+		@media (max-width: 520px) {
+			font-size: 1.6rem;
+		}
+	}
+	&__address img {
+		width: 100%;
+		margin-bottom: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+		@media (max-width: 775px) {
+			width: 100%;
+		}
+		@media (max-width: 520px) {
+			width: 100%;
+		}
+	}
+}
